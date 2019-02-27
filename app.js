@@ -10,6 +10,11 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
+app.use(bodyParser.json());
 
 // change MongoDB address here
 let mongodbURI ="mongodb://localhost:27017/url-shorterner";
