@@ -7,9 +7,12 @@
     <title>Url Shortener</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="/javascripts/main.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
 
 
 </head>
@@ -26,7 +29,7 @@
             </div>
 
             <div class="navbar-menu is-active">
-        
+
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <div class="buttons">
@@ -60,6 +63,7 @@
 </section>
 
 
+
     <section class="hero  is-bold">
         <div class="hero-body">
             <div class="container">
@@ -71,13 +75,15 @@
                 </h2>
                 <div class="field">
                     <div class="control">
-                        <input class="input" type="text" placeholder="Enter something to be shrotened">
+                        <input class="input" id="source" maxlength="100" type="text" placeholder="Enter something to be shrotened">
                     </div>
                 </div>
                 <div class="field">
                     <p class="control">
                         <button class="button is-primary ">
                             Shortern Now
+                        <button id="shorten" class="button is-primary">
+                            Shorten Now
                         </button>
                     </p>
                 </div>
@@ -86,6 +92,9 @@
         </div>
     </section>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/javascripts/main.js"></script>
 
 </body>
 
