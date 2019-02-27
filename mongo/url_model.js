@@ -3,10 +3,8 @@ const mongoose = require('mongoose');
 const sampleSchema = mongoose.Schema({
     source: {
         type: String,
-        index: true,
-        unique: true
     },
-    shortened: {
+    shortenURL: {
         type: String,
         index: true,
         unique: true

@@ -4,16 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Url Shortener</title>
+    <title>URL Shortener</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="/javascripts/main.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
-
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
 
 </head>
 
@@ -29,21 +27,20 @@
             </div>
 
             <div class="navbar-menu is-active">
-
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <div class="buttons">
                             <a class="button is-dark is-medium">
                                 <span class="icon is-medium">
                                     <i class="fab fa-github"></i>
-                                  </span> 
+                                </span>
                             </a>
                             <a class="button is-medium">
                                 <span class="icon is-medium">
-                                  <i class="fab fa-medium-m"></i>
+                                    <i class="fab fa-medium-m"></i>
                                 </span>
-                              
-                              </a>
+
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -51,20 +48,22 @@
         </div>
     </nav>
 
- 
-    <section class="hero  is-bold">
-        <div class="container">
+    <section class="hero is-bold is-info">
+        <div class="hero-body">
+            <div class="container">
                 <div class="content">
-                        <h1>Hello World</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.</p>
-                
-                      </div>
-    </div>
-</section>
+                    <h1 class="title is-4">Hello World</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend
+                        gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui.
+                        Fusce
+                        erat odio, sollicitudin vel erat vel, interdum mattis neque.</p>
 
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-    <section class="hero  is-bold">
+    <section class="hero is-bold">
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
@@ -75,19 +74,40 @@
                 </h2>
                 <div class="field">
                     <div class="control">
-                        <input class="input" id="source" maxlength="100" type="text" placeholder="Enter something to be shrotened">
+                        <input class="input" id="sourceInput" maxlength="100" type="text" placeholder="Enter something to genrate the shrotened URL">
                     </div>
                 </div>
                 <div class="field">
                     <p class="control">
-                        <button class="button is-primary ">
-                            Shortern Now
-                        <button id="shorten" class="button is-primary">
+                        <button id="shortenBtn" class="button is-primary">
                             Shorten Now
                         </button>
                     </p>
                 </div>
 
+            </div>
+        </div>
+    </section>
+    <hr />
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container">
+                <h2 class="title is-4">Recent 50 records</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Shortern URL</th>
+                            <th>Source</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>23</td>
+                        </tr>
+
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>

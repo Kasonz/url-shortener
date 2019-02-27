@@ -15,13 +15,13 @@ router.get('/', function (req, res, next) {
 /* GET home page. */
 router.post('/create', function (req, res, next) {
 
-  urlControl.main(req.body.something).then((savedResult) => {
-    // fulfillment
+  urlControl.main(req.body.source).then((shortenURL) => {
 
-
+  res.send(shortenURL);
 
   }, (error) => {
-    // rejection
+    console.log(error);
+    res.send("some error");
   });
 
 });
