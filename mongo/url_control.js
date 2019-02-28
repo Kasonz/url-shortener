@@ -2,8 +2,7 @@ const urlModel = require("./url_model");
 const utils = require("../utils/utils");
 let controls = {};
 
-var count = 0;
-controls.main = async function (source) {
+controls.create = async function (source) {
 
     // generate 10 shorten url arrays, loop them one by one, in most cases the first one would be ok
     let URLArray = utils.getShortenURLArray(10);
@@ -31,6 +30,26 @@ controls.main = async function (source) {
 
     }
 
+
+}
+
+
+controls.recent = async function () {
+
+    try {
+        let queryRes = await urlModel.find({})
+        .select('source shortenURL')
+        .limit(50)
+        .sort({
+            when: -1
+        });
+        return queryRes;
+
+    } catch (error) {
+        console.log(error);
+        return [];
+
+    }
 
 }
 

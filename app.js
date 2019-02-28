@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -6,9 +8,15 @@ var logger = require('morgan');
 const compression = require('compression');
 const mongoose = require('mongoose');
 
+require('dotenv').config();
+
+
 var indexRouter = require('./routes/index');
 
-var app = express();
+const app = express();
+
+const helmet = require('helmet')
+app.use(helmet())
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({
@@ -17,7 +25,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 // change MongoDB address here
-let mongodbURI ="mongodb://localhost:27017/url-shorterner";
+let mongodbURI = process.env.DB_ADDR;
 
 mongoose.connect(
   mongodbURI, {

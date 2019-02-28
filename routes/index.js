@@ -12,12 +12,24 @@ router.get('/', function (req, res, next) {
 });
 
 
+router.get('/recent', function (req, res, next) {
+
+  urlControl.recent().then((queryRes) => {
+    res.send(queryRes);
+  }, (error) => {
+    console.log(error);
+    res.send([]);
+  });
+
+
+});
+
+
 /* GET home page. */
 router.post('/create', function (req, res, next) {
 
-  urlControl.main(req.body.source).then((shortenURL) => {
-
-  res.send(shortenURL);
+  urlControl.create(req.body.source).then((shortenURL) => {
+    res.send(shortenURL);
 
   }, (error) => {
     console.log(error);
